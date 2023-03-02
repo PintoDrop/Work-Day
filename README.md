@@ -52,4 +52,4 @@ GIVEN I am using a daily planner to create a schedule
 
 ## Screen Shots
 
-![Deployed Website]()
+![Deployed Website](./assets/images/screenshot.JPG)

@@ -72,20 +72,32 @@ let create_calander = (hours) => {
   // {
   //   return;}
   // }
+  // time.addEventListener(display);
 
-    let calander = (i, hours) => {
-          return function() {
-            var time = new Date();
-                let data = prompt("Appointments: (click Okay to save)");
+  function display(){
+    localStorage.setItem("time", data.prompt);
+    calander = localStorage.getItem("time");
+
+  }
+  
+
+  let calander = (i, hours) => {
+    return function() {
+      var time = new Date();
+      let data = prompt("Appointments: (click Okay to save)");
+      console.log("appointments go here");
+      
+      localStorage.setItem('time', data.prompt);
+
+      // console.log(localStorage.getItem("hours"));
+
                 let blocks = document.getElementsByClassName("block");
                 if (data) {
                       blocks[i].innerHTML = blocks[i].innerHTML+"<br>"+data
-                      //  localStorage.setItem("time", time);
-                      //  localStorage.setItem("prompt", prompt);
-                      //  renderLastRegistered();
                   };
               };
           };
+           
 
   //       calander.addEventListener("click", function(event) {
   // event.preventDefault();
