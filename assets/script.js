@@ -57,11 +57,11 @@ let create_calander = (hours) => {
         // let hour = (hour = ((hour + 11) % 12) + 1);
         for (var i = 0; i < blocks.length; i++) {
             if (hours[i] < hour) {
-                blocks[i].style.background = "lightsalmon"
+                blocks[i].style.background = "lightblue"
             } else if (hours[i] > hour){
                 blocks[i].style.background = "lightgreen"
             } else {
-                blocks[i].style.background = "lightblue"
+                blocks[i].style.background = "lightsalmon"
             };
           
         };
