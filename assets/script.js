@@ -27,7 +27,6 @@ let create_calander = (hours) => {
     
     window.onload = () => {
         let hours = [
-          8,
           9,
           10,
           11,
