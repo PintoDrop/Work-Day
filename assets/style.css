@@ -59,6 +59,10 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.calendar {
+
+.block{
   cursor: pointer;
+  border-color: black;
+  border: 1px solid black;
+  padding: 4px;
 }

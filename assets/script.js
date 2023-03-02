@@ -3,7 +3,6 @@
 // in the html.
 
  // TODO: Add code to display the current date in the header of the page.
-// var dayjs = anonymous function() that sets date
 var time = new Date();
 console.log(time.toLocaleString("en-US", { hour: "numeric", hour12: true }));
 
