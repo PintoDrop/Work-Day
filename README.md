@@ -48,7 +48,7 @@ GIVEN I am using a daily planner to create a schedule
 
 ## Website Link
 
-[Work-Day]()
+[Work-Day](https://pintodrop.github.io/Work-Day/)
 
 ## Screen Shots
 
