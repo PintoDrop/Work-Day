@@ -52,5 +52,5 @@ GIVEN I am using a daily planner to create a schedule
 
 ## Screen Shots
 
-![Deployed Website](./assets/Images/shot1.JPG)
-![Deployed Website](./assets/Images/shot2.JPG)
+![Deployed Website](./assets/Images/shot3.JPG)
+![Deployed Website](./assets/Images/shot4.JPG)
