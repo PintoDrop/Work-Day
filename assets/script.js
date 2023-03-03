@@ -1,17 +1,4 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
- // TODO: Add code to display the current date in the header of the page.
-// var time = new Date();
-// console.log(time.toLocaleString("en-US", { hour: "numeric", hour12: true }));
-
-// let dayJS = () => {
-//     let elm = document.getElementById("currentDay");
-//     let d = new Date()
-//     elm.innerHTML = d
-// };
-
+// TODO: Add code to display the current date in the header of the page.
 $(function(){
   $("#currentDay").text(new Date())
 
@@ -33,81 +20,28 @@ $(function(){
 
   function setColors(){
     var currentTime = dayjs().hour();
-    
-    // .each jquery elements
-    $("time-block").each(function () {
+
+
+    $(".time-block").each(function () {
       var blockTime = parseInt($(this).attr("id"));
-      console.log(blockTime)
+      console.log(blockTime);
       if (blockTime < currentTime) {
-        $(this).addClass("past")
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
       } else if (blockTime === currentTime) {
         $(this).removeClass("past");
+        $(this).removeClass("future");
         $(this).addClass("present");
       } else {
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
       }
-    })
+    });
   }
   setColors()
 })
-
-
-    let set_colors = (hours) => {
-        let blocks = document.getElementsByClassName("block");
-        let d = new Date()
-        let hour = d.getHours()
-        var time = new Date();
-        // let hour = (hour = ((hour + 11) % 12) + 1);
-        for (var i = 0; i < blocks.length; i++) {
-            if (hours[i] < hour) {
-                blocks[i].style.background = "lightblue"
-            } else if (hours[i] > hour){
-                blocks[i].style.background = "lightgreen"
-            } else {
-                blocks[i].style.background = "lightsalmon"
-            };
-          
-        };
-    };
-  //   function renderLastRegistered() {
-  // var time = localStorage.getItem("time");
-  // var data = localStorage.getItem("data");
-
-  // {
-  //   return;}
-  // }
-  // time.addEventListener(display);
-
-  // function display(){
-  //   localStorage.setItem("time", data.prompt);
-  //   calander = localStorage.getItem("time");
-
-  // }
-  
-
-  // let calander = (i, hours) => {
-  //   return function() {
-  //     var time = new Date();
-  //     let data = prompt("Appointments: (click OK to save)");
-  //     console.log("appointments go here");
-      
-  //     localStorage.setItem('time', data.prompt);
-
-  //     // console.log(localStorage.getItem("hours"));
-
-  //               let blocks = document.getElementsByClassName("block");
-  //               if (data) {
-  //                     blocks[i].innerHTML = blocks[i].innerHTML+"<br>"+data
-  //                 };
-  //             };
-  //         };
-           
-
-  //       calander.addEventListener("click", function(event) {
-  // event.preventDefault();
-
 
 // TODO: Add a listener for click events on the save button. This code should
 // use the id in the containing time-block as a key to save the user input in
@@ -116,7 +50,6 @@ $(function(){
 // time-block containing the button that was clicked? How might the id be
 // useful when saving the description in local storage?
 
-// .addEventListener("click", function (event) {}
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -133,10 +66,3 @@ $(function(){
   // TODO: Add code to display the current date in the header of the page.
   // $(function () {
     
-  //   const dayjs = require("dayjs");
-  //   dayjs().format();
-  
-  
-  //   var todayDate = moment().format("dd, MM Do YYYY");
-  //   $("$currentDay").html(todayDate);
-  // });

@@ -61,7 +61,7 @@ textarea {
 }
 
 
-.block:hover {
+/* .block:hover {
   cursor: pointer;
   border: 4px solid black;
   padding: 7px;
@@ -82,4 +82,4 @@ textarea {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-}
+} */

@@ -2,7 +2,7 @@
 
 ## Description
 
-For this assignment I was tasked with making a day planner. I will be using javascript to make sure the planner is functional and the user is able to interact with it. I used the dayJS function to help create the date and time at the top of the page and was able to make my own boxes for times to allow the user to schedule their day. The user is able to input their tasks or appointments in the time frame boxes which are color coded to represent past, present and future as the time progresses.
+For this assignment I was tasked with making a day planner. I will be using javascript to make sure the planner is functional and the user is able to interact with it. I used the dayJS function to help create the date and time at the top of the page and was able to make my own boxes for times to allow the user to schedule their day. The user is able to input their tasks or appointments in the time frame boxes which are color coded to represent past, present and future as the time progresses. The user is now able to save tasks or appointments they have in the respective time block to visually see what their day looks like.
 
 ## Installation
 
@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-This application allows the user to plan their week with a day planner. The user will be able to add appointments and tasks the need to get done for the week. The user will be able to see that the past, present and future time blocks are color coded so it is easier ot navigate the application. 
+This application allows the user to plan their week with a day planner. The user will be able to add appointments and tasks they need to get done for the day. The user will be able to see that the past, present and future time blocks are color coded so it is easier to navigate the application.
 
 ## Credits
 
@@ -48,8 +48,9 @@ GIVEN I am using a daily planner to create a schedule
 
 ## Website Link
 
-[Work-Day]( )
+[Work-Day]()
 
 ## Screen Shots
 
-![Deployed Website](./assets/Images/screenshot2.JPG)
+![Deployed Website](./assets/Images/screenshot4.JPG)
+![Deployed Website](./assets/Images/screenshot3.JPG)
