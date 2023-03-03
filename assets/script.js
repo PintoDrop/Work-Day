@@ -3,49 +3,56 @@
 // in the html.
 
  // TODO: Add code to display the current date in the header of the page.
-var time = new Date();
-console.log(time.toLocaleString("en-US", { hour: "numeric", hour12: true }));
+// var time = new Date();
+// console.log(time.toLocaleString("en-US", { hour: "numeric", hour12: true }));
 
-let dayJS = () => {
-    let elm = document.getElementById("date")
-    let d = new Date()
-    elm.innerHTML = d
-};
+// let dayJS = () => {
+//     let elm = document.getElementById("currentDay");
+//     let d = new Date()
+//     elm.innerHTML = d
+// };
 
+$(function(){
+  $("#currentDay").text(new Date())
 
-let create_calander = (hours) => {
-  let elm = document.getElementById("calander");
-  for (var i = 0; i < hours.length; i++) {
-        let new_div = document.createElement("div")
-        new_div.appendChild
-        new_div.className = "block"
-        new_div.innerHTML = hours[i]+ ":00 - "+(hours[i]+1)+":00"
-        new_div.onclick = calander(i, hours)
-        elm.appendChild(new_div)
-      };
-    };
+  $(".saveBtn").on("click", function(){
+    var time = $(this).parent().attr("id");
+    var text = $(this).siblings(".description").val();
+    localStorage.setItem(time, text);
+  })
+
+  $("#9 .description").text(localStorage.getItem("9"));
+  $("#10 .description").text(localStorage.getItem("10"));
+  $("#11 .description").text(localStorage.getItem("11"));
+  $("#12 .description").text(localStorage.getItem("12"));
+  $("#13 .description").text(localStorage.getItem("13"));
+  $("#14 .description").text(localStorage.getItem("14"));
+  $("#15 .description").text(localStorage.getItem("15"));
+  $("#16 .description").text(localStorage.getItem("16"));
+  $("#17 .description").text(localStorage.getItem("17"));
+
+  function setColors(){
+    var currentTime = dayjs().hour();
     
-    window.onload = () => {
-        let hours = [
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16,
-          17,
-        ];
-        dayJS(); 
-        create_calander(hours)
-        set_colors(hours)
-    
-        setInterval(function () {
-            dayJS();
-            set_colors(hours);
-        }, 1000)
-    };
+    // .each jquery elements
+    $("time-block").each(function () {
+      var blockTime = parseInt($(this).attr("id"));
+      console.log(blockTime)
+      if (blockTime < currentTime) {
+        $(this).addClass("past")
+      } else if (blockTime === currentTime) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      }
+    })
+  }
+  setColors()
+})
+
 
     let set_colors = (hours) => {
         let blocks = document.getElementsByClassName("block");
@@ -73,29 +80,29 @@ let create_calander = (hours) => {
   // }
   // time.addEventListener(display);
 
-  function display(){
-    localStorage.setItem("time", data.prompt);
-    calander = localStorage.getItem("time");
+  // function display(){
+  //   localStorage.setItem("time", data.prompt);
+  //   calander = localStorage.getItem("time");
 
-  }
+  // }
   
 
-  let calander = (i, hours) => {
-    return function() {
-      var time = new Date();
-      let data = prompt("Appointments: (click Okay to save)");
-      console.log("appointments go here");
+  // let calander = (i, hours) => {
+  //   return function() {
+  //     var time = new Date();
+  //     let data = prompt("Appointments: (click OK to save)");
+  //     console.log("appointments go here");
       
-      localStorage.setItem('time', data.prompt);
+  //     localStorage.setItem('time', data.prompt);
 
-      // console.log(localStorage.getItem("hours"));
+  //     // console.log(localStorage.getItem("hours"));
 
-                let blocks = document.getElementsByClassName("block");
-                if (data) {
-                      blocks[i].innerHTML = blocks[i].innerHTML+"<br>"+data
-                  };
-              };
-          };
+  //               let blocks = document.getElementsByClassName("block");
+  //               if (data) {
+  //                     blocks[i].innerHTML = blocks[i].innerHTML+"<br>"+data
+  //                 };
+  //             };
+  //         };
            
 
   //       calander.addEventListener("click", function(event) {

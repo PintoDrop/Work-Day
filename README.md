@@ -2,7 +2,7 @@
 
 ## Description
 
-For this assignment I was tasked with making a day planner. I will be using javascript to make sure the planner is functional and the user is able to interact with it. I used the dayJS function to help create the date and time at the top of the page and was able to make my own boxes for times to allow the user to schedule their day.
+For this assignment I was tasked with making a day planner. I will be using javascript to make sure the planner is functional and the user is able to interact with it. I used the dayJS function to help create the date and time at the top of the page and was able to make my own boxes for times to allow the user to schedule their day. The user is able to input their tasks or appointments in the time frame boxes which are color coded to represent past, present and future as the time progresses.
 
 ## Installation
 
